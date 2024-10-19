@@ -1,0 +1,81 @@
+/* Hide scrollbar by default */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+    opacity: 0; /* Make scrollbar invisible by default */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+/* Show scrollbar on hover */
+.scrollable-element:hover ::-webkit-scrollbar {
+    opacity: 1; /* Make scrollbar visible on hover */
+}
+
+/* Background of the scrollbar track (set to transparent) */
+::-webkit-scrollbar-track {
+    background: transparent; /* Make track transparent */
+}
+
+/* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #555; /* Darker color for the scrollbar handle */
+    border-radius: 6px; /* Rounded corners for the handle */
+}
+
+/* Hover effect for the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Lighter color when hovering */
+}
+
+/* Optional: For horizontal scrollbar */
+::-webkit-scrollbar-horizontal {
+    background: transparent; /* Make horizontal track transparent */
+}
+
+/* Apply the scrollbar styles to a specific scrollable element */
+.scrollable-element {
+    overflow: auto; /* Ensure the element can be scrolled */
+    max-height: 400px; /* Adjust based on your layout */
+    /* Add any other styles for your scrollable element */
+}
+
+ul{
+    list-style-type: none;
+    padding: 5px;
+}
+
+.border{
+    border: 2px solid red;
+}
+
+.bgMain{
+    background-color: #1f1f1f;
+}
+
+.btn-1{
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+    background: none;
+}
+
+.btn-2{
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border-radius: 24px;
+    font-weight: bold;
+}
+
+.btn-1:hover{
+    font-size: 15px;
+}
+
+.btn-2:hover{
+    font-size: 15px;
+}
+
+.pointer{
+    cursor: pointer;
+}

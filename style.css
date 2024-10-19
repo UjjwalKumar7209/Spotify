@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    color: white;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin: 6px 10px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.homeImg {
+    border: none;
+    background-color: #1f1f1f;
+    padding: 7px;
+    border-radius: 36px;
+}
+
+.headerLeft input {
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    transition: all 2s ease-in;
+    width: 334px;
+}
+
+.main {
+    display: flex;
+    position: relative;
+}
+
+aside {
+    width: 25vw;
+    background-color: #1f1f1f;
+    margin: 0 5px;
+    padding: 15px;
+    height: 83vh;
+    border-radius: 30px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.close{
+    display: none;
+}
+
+.asideHeader {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.15em;
+    gap: 10px;
+    position: sticky;
+    top: -16px;
+    padding: 12px
+}
+
+main {
+    width: 75vw;
+    margin: 0 5px;
+    padding: 15px;
+    height: 83vh;
+    border-radius: 30px;
+    overflow-y: scroll;
+}
+
+.songList ul li span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.songList ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 5px;
+    padding: 11px;
+    border: 2px solid #857a7a;
+    border-radius: 12px;
+    font-size: 11px;
+}
+
+.songList ul li:hover {
+    background-color: #383737;
+}
+
+.container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    padding: 12px;
+    background-color: #383737;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.container:hover {
+    background-color: #625c5c;
+}
+
+
+
+.album-image {
+    position: relative;
+}
+
+.album-image img {
+    border-radius: 5px;
+}
+
+.circlePlay img {
+    border: 2px solid rgb(14, 205, 14);
+    border-radius: 38px;
+    background: rgb(14, 205, 14);
+    padding: 6px;
+    position: absolute;
+    bottom: 15px;
+    right: 7px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.songAlbum:hover .circlePlay img {
+    opacity: 1;
+}
+
+
+
+.seek {
+    background-color: #465046;
+    width: 65vw;
+    margin: 15px auto;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    padding: 12px 23px;
+    height: 62px;
+}
+
+.seekAbove {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.playPauseSVG {
+    justify-content: center;
+}
+
+.seekAbove>* {
+    width: 500px;
+    display: flex;
+}
+
+.seekBottom {
+    width: 65vw;
+    margin: auto;
+    background: white;
+    height: 2px;
+    border-radius: 5px;
+    position: relative;
+    bottom: -30px;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 12px;
+    position: absolute;
+    bottom: -5px;
+    left: 0%;
+}
+
+.duration {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+.songInfo *,
+.duration p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1050px) {
+    .hamburger{
+        display: inline;
+    }
+
+    .headerLeft input{
+        display: none;
+    }
+
+    aside {
+        width: 85vw;
+        position: absolute;
+        left: -115%;
+        justify-content: space-between;
+        z-index: 2;
+        transition: all .5s;
+    }
+
+    .asideHeader {
+        justify-content: space-between;
+    }
+
+    .close{
+        display: inline;
+    }
+
+    main {
+        width: 100vw;
+        height: 88vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .seek {
+        width: 85vw;
+        padding: 10px 0;
+        height: 80px;
+        margin: 35px auto;
+    }
+
+    .seekAbove{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .seekAbove *{
+        width: auto;
+    }
+
+    .seekBottom{
+        bottom: -10px;
+    }
+}
