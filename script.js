@@ -13,7 +13,7 @@ function formatTime(seconds) {
 // Dynamic loading of albums
 async function dynamicAlbum(folderName) {
   let URL = await fetch(
-    `http://127.0.0.1:3000/songs/${folderName}/assets/readme.txt`
+    `http://127.0.0.1:3002/songs/${folderName}/assets/readme.txt`
   );
   let response = await URL.text();
   document.querySelector(".album").innerHTML += `
@@ -57,7 +57,7 @@ async function dynamicAlbum(folderName) {
 
 // Fetching songs and storing the href in songs array
 async function getSongs(folderName) {
-  let URL = await fetch(`http://127.0.0.1:3000/songs/${folderName}/`);
+  let URL = await fetch(`http://127.0.0.1:3002/songs/${folderName}/`);
   let response = await URL.text();
   let div = document.createElement("div");
   div.innerHTML = response;
